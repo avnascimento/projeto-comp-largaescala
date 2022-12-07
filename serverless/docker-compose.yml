@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  temp_event:
+    build: ./convert-temp-event
+    ports:
+      - 9000:8080
+
+  peso_event:
+    build: ./convert-peso-event
+    ports:
+      - 9001:8080
+
+  distance_event:
+    build: ./convert-distance-event
+    ports:
+      - 9002:8080
+
+  words_event:
+    build: ./count-words-event
+    ports:
+      - 9003:8080

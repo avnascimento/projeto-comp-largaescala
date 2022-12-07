@@ -23,14 +23,14 @@ async def get_products():
     return await db_manager.get_all_products()
 
 @products.get('/{id}/', response_model=ProductOut)
-async def get_movie(id: int):
+async def get_product(id: int):
     product = await db_manager.get_product(id)
     if not product:
         raise HTTPException(status_code=404, detail=MESSAGE_PRODUCT_NOT_FOUND)
     return product
 
 @products.put('/{id}/', response_model=ProductOut)
-async def update_movie(id: int, payload: ProductUpdate):
+async def update_product(id: int, payload: ProductUpdate):
     product = await db_manager.get_product(id)
     if not product:
         raise HTTPException(status_code=404, detail=MESSAGE_PRODUCT_NOT_FOUND)
