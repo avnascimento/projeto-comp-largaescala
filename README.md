@@ -21,7 +21,7 @@ Após a execução do comando, irá ser possivel entrar na documentação e real
 
 
 
-* ### Execução dos microsserviços
+* ### Execução do serverless
 
 Para execução do serverless, basta entrar na pasta ```serverless``` e executar o comando 
 ```
